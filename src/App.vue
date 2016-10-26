@@ -19,13 +19,13 @@
         <span class="todo-count"><strong>{{todos.length}}</strong> item left</span>
         <ul class="filters">
           <li>
-            <a v-bind:class="{'selected':selector.completed==undefined}" href="#/" v-on:click="filters(undefined)">All</a>
+            <a v-bind:class="{'selected':selector.completed==undefined}" v-link="{ name: 'index' }" v-on:click="filters(undefined)">All</a>
           </li>
           <li>
-            <a v-bind:class="{'selected':selector.completed==false}" href="#/active" v-on:click="filters(false)">Active</a>
+            <a v-bind:class="{'selected':selector.completed==false}" v-link="{ name: 'active' }" v-on:click="filters(false)">Active</a>
           </li>
           <li>
-            <a v-bind:class="{'selected':selector.completed==true}" href="#/completed" v-on:click="filters(true)">Completed</a>
+            <a v-bind:class="{'selected':selector.completed==true}" v-link="{ name: 'completed' }"  v-on:click="filters(true)">Completed</a>
           </li>
         </ul>
         <button class="clear-completed" v-on:click="clear">Clear completed</button>
@@ -84,10 +84,20 @@ export default {
         this.todos[i].completed = now
       }
       now = !now
+    },
+    filters (opt) {
+      if (opt === undefined) {
+        this.selector = { completed: undefined }
+      } else if (opt) {
+        this.selector = { completed: true }
+      } else {
+        this.selector = { completed: false }
+      }
     }
   },
   filters: {
     equalCompare (value, filter) {
+      console.log(value)
       var result = []
       console.log(filter)
       if (filter.completed === undefined) {
