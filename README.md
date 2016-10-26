@@ -1,8 +1,8 @@
 # mydemo
 
-> A Vue.js project
+> 一个 Vue project
 
-> 使用vue、vue-router
+> 使用vue、vue-router、webpack
 
 ## Build Setup
 
