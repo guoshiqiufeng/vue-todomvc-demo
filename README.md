@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+> 使用vue、vue-router
+
 ## Build Setup
 
 ``` bash
