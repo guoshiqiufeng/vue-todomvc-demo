@@ -2,7 +2,7 @@
 
 > 一个 Vue project
 
-> 使用vue、vue-router、webpack
+> 使用vue、vue-router、webpack、es6
 
 ## Build Setup
 
