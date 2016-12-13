@@ -2,8 +2,7 @@
 
 > 一个 Vue project
 
-> 使用vue、vue-router、webpack、es6
-
+> 使用vue、vue-router、webpack、es6 实现todoMVC
 ## Build Setup
 
 ``` bash
